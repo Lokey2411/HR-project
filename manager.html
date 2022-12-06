@@ -58,40 +58,12 @@ let parent = document.getElementsByTagName('tr');
 
 var lokeyFunction = function(){
     var inputElements = document.querySelectorAll('.form-control');
-    // let file = "custommer.txt";
     for(let i=0;i<5;++i){
         document.write(`<td> ${inputElements[i]}<\td>`);
         parent[i+1].outerHTML = `<td> ${inputElements[i]}<\td>`;    
     }
 
 }
-
-// function writeTextFile(inputTextToSave,inputFileNameToSaveAs)
-// {
-//     // var textToWrite = document.getElementById(inputTextToSave).value;
-//     var textFileAsBlob = new Blob([inputTextToSave], {type:'text/plain'});
-//     // var fileNameToSaveAs = document.getElementById(inputFileNameToSaveAs).value;
-//       var downloadLink = document.createElement("a");
-//     downloadLink.download = inputFileNameToSaveAs;
-//     downloadLink.innerHTML = "Download File";
-//     if (window.webkitURL != null)
-//     {
-//         // Chrome allows the link to be clicked
-//         // without actually adding it to the DOM.
-//         downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-//     }
-//     else
-//     {
-//         // Firefox requires the link to be added to the DOM
-//         // before it can be clicked.
-//         downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-//         downloadLink.onclick = destroyClickedElement;
-//         downloadLink.style.display = "none";
-//         document.body.appendChild(downloadLink);
-//     }
- 
-//     downloadLink.click();
-// }
 
 var save = document.querySelectorAll('.fa-floppy-o');
 
@@ -178,8 +150,7 @@ for(let i=0;i<n;++i){
             window.location = 'hr_management/index.html';
         }
     </script>
-    <style>
-    </style>
+    
 </head>
 
 <body onload="time()">
@@ -189,29 +160,28 @@ for(let i=0;i<n;++i){
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <i class="fas fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#"style="color: #000 !important;"><i class="fa fa-user-circle" aria-hidden="true" ></i> QUẢN
+                <a class="navbar-brand" href="#" style="color: #000 !important;"><i class="fa fa-user-circle" aria-hidden="true"></i> QUẢN
                     LÝ NHÂN VIÊN</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./manager.html" data-toggle="tooltip" data-placement="bottom"
-                        title="QUẢN LÝ" style="color: #000 !important;">QUẢN LÝ</a></li>
-                    <li class="active"><a href="./custommer.html" data-toggle="tooltip" data-placement="bottom"
-                        title="NHÂN VIÊN" style="color: #000 !important;">NHÂN VIÊN</a></li>
+                    <li class="active"><a href="./manager.html" data-toggle="tooltip" data-placement="bottom"
+                        title="NHÂN VIÊN"style="color: #000 !important;">QUẢN LÝ</a></li>
+                    <li><a href="./custommer.html" data-toggle="tooltip" data-placement="bottom"
+                        title="NHÂN VIÊN"style="color: #000 !important;">NHÂN VIÊN</a></li>
                     <li><a href="./diem_danh.html" data-toggle="tooltip" data-placement="bottom"
-                        title="ĐIỂM DANH" style="color: #000 !important;">ĐIỂM DANH</a></li>
+                        title="ĐIỂM DANH"style="color: #000 !important;">ĐIỂM DANH</a></li>
                     <li><a href="./luong.html"  data-toggle="tooltip" data-placement="bottom"
-                        title="TIỀN LƯƠNG" style="color: #000 !important;">TIỀN LƯƠNG</a></li>
-                    <li><a href="./lich.html"  data-toggle="tooltip" data-placement="bottom" 
-                        title="CÔNG TÁC" style="color: #000 !important;">
-                        CÔNG TÁC</a></li>
+                        title="TIỀN LƯƠNG"style="color: #000 !important;">TIỀN LƯƠNG</a></li>
+                    <li><a href="./lich.html"  data-toggle="tooltip" data-placement="bottom"
+                        title="CÔNG TÁC"style="color: #000 !important;">CÔNG TÁC</a></li>
                     <li><a href="./baocao.html"  data-toggle="tooltip" data-placement="bottom"
-                        title="BÁO CÁO" style="color: #000 !important;">BÁO CÁO</a></li>
+                        title="BÁO CÁO"style="color: #000 !important;">BÁO CÁO</a></li>
                     <li><a href="./sukien.html"  data-toggle="tooltip" data-placement="bottom"
-                        title="SỰ KIỆN" style="color: #000 !important;">SỰ KIỆN</a></li>
+                        title="SỰ KIỆN"style="color: #000 !important;">SỰ KIỆN</a></li>
                     <li>
                         <a href="#"  data-toggle="tooltip" data-placement="bottom"
-                        title="TÀI KHOẢN"><b>Tài Khoản</b>
+                        title="TÀI KHOẢN"style="color: #000 !important;"><b>Tài Khoản</b>
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown">
@@ -253,11 +223,10 @@ for(let i=0;i<n;++i){
         <table class="table table-bordered" id="myTable">
             <thead>
                 <tr class="ex">
-                    <th>Mã nhân viên</th>
-                    <th width="auto">Tên Nhân Viên</th>
-                    <th width="auto">Mã Quản lý</th>
-                    <th>Đơn vị</th>
+                    <th>Mã quản lý</th>
+                    <th width="auto">Tên</th>
                     <th>Chức Vụ</th>
+                    <th width="auto">Đơn vị Quản lý</th>
                     <th width="5px; !important">Tính Năng</th>
                 </tr>
             </thead>
@@ -267,8 +236,6 @@ for(let i=0;i<n;++i){
                     <td></td>
                     <td></td>
                     <td></td>
-
-                    <td></td>
                     <td>
                         <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
                                 aria-hidden="true"></i></a>
@@ -283,8 +250,6 @@ for(let i=0;i<n;++i){
                     <td></td>
                     <td></td>
                     <td></td>
-
-                    <td></td>
                     <td>
                         <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
                                 aria-hidden="true"></i></a>
@@ -298,8 +263,6 @@ for(let i=0;i<n;++i){
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-
                     <td></td>
                     <td>
                         <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
@@ -315,8 +278,6 @@ for(let i=0;i<n;++i){
                     <td></td>
                     <td></td>
                     <td></td>
-
-                    <td></td>
                     <td>
                         <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
                                 aria-hidden="true"></i></a>
@@ -327,23 +288,6 @@ for(let i=0;i<n;++i){
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-                    <td></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                aria-hidden="true"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -362,6 +306,19 @@ for(let i=0;i<n;++i){
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td>
+                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
+                                aria-hidden="true"></i></a>
+                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
+                                aria-hidden="true"></i></a>
+                        <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
+                                aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td>
                         <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
@@ -377,7 +334,6 @@ for(let i=0;i<n;++i){
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                     <td>
                         <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
                                 aria-hidden="true"></i></a>
@@ -392,7 +348,6 @@ for(let i=0;i<n;++i){
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                     <td>
                         <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
                                 aria-hidden="true"></i></a>
@@ -403,7 +358,6 @@ for(let i=0;i<n;++i){
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -535,10 +489,9 @@ for(let i=0;i<n;++i){
                 $(this).attr("disabled", "disabled");
                 var index = $("table tbody tr:last-child").index();
                 var row = '<tr>' +
-                    '<td><input type="text" class="form-control" name="manv" id="manv" value="" placeholder="Nhập Mã nhân viên"></td>' +
+                    '<td><input type="text" class="form-control" name="manv" id="manv" value="" placeholder="Nhập Mã quản lý"></td>' +
                     '<td><input type="text" class="form-control" name="name" id="name" placeholder="Nhập Tên"></td>' +
-                    '<td><input type="text" class="form-control" name="captrn" id="gioitinh" placeholder="Nhập Mã Quản lý"></td>' +
-                    '<td><input type="text" class="form-control" name="namsinh" id="namsinh" value="" placeholder="Nhập Đơn vị"></td>' +
+                    '<td><input type="text" class="form-control" name="captrn" id="gioitinh" placeholder="Nhập Quản lý"></td>' +
                     '<td><input type="text" class="form-control" name="chucvu" id="chucvu" value="" placeholder="Nhập Chức Vụ"></td>' +
                     '<td>' + actions + '</td>' +
                     '</tr>';
