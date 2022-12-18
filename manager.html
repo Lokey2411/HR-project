@@ -18,6 +18,7 @@
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!--===============================================================================================-->
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="fixed.css">
     <!-- Latest compiled and minified CSS -->
     <!--===============================================================================================-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -36,7 +37,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!--===============================================================================================-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <script type="text/javascript">
               class Employee{
   constructor(name,gender,birthday,address,position){
@@ -147,10 +147,11 @@ for(let i=0;i<n;++i){
         var logOut = document.querySelectorAll('b')[1];
         logOut.onclick = function(){
             swal('Đăng xuất thành công!\nTrở về trang chủ');
-            window.location = 'hr_management/index.html';
+            window.location = './';
         }
     </script>
-    
+    <style>
+    </style>
 </head>
 
 <body onload="time()">
@@ -180,10 +181,7 @@ for(let i=0;i<n;++i){
                     <li><a href="./sukien.html"  data-toggle="tooltip" data-placement="bottom"
                         title="SỰ KIỆN"style="color: #000 !important;">SỰ KIỆN</a></li>
                     <li>
-                        <a href="#"  data-toggle="tooltip" data-placement="bottom"
-                        title="TÀI KHOẢN"style="color: #000 !important;"><b>Tài Khoản</b>
-                            <span class="caret"></span>
-                        </a>
+                        
                         <ul class="dropdown">
                             <li><a href="./index.html"  data-toggle="tooltip" data-placement="bottom"
                                 title="ĐĂNG XUẤT"><b>Đăng xuất <i class="fas fa-sign-out-alt"></i></b></a></li>
@@ -198,7 +196,7 @@ for(let i=0;i<n;++i){
         <div id="clock"></div>
         <Br>
         <p class="timkiemnhanvien"><b>TÌM KIẾM NHÂN VIÊN:</b></p><Br><Br>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Nhập tên nhân viên cần tìm..."
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Nhập mã quản lý cần tìm..."
             data-toggle="tooltip" data-placement="bottom" title="Tìm Kiếm Nhân Viên">
         <i class="fa fa-search" aria-hidden="true"></i>
 
@@ -209,7 +207,7 @@ for(let i=0;i<n;++i){
         <button class="nv btn add-new" type="button" data-toggle="tooltip" data-placement="top"
             title="Thêm Nhân Viên"><i class="fas fa-user-plus"></i></button>
         <button class="nv" type="button" onclick="sortTable()" data-toggle="tooltip" data-placement="top"
-            title="Lọc Dữ Liệu"><i class="fa fa-filter" aria-hidden="true"></i></button>
+            title="Sắp xếp danh sách quản lý "><i class="fa fa-filter" aria-hidden="true"></i></button>
         <button class="nv xuat" data-toggle="tooltip" data-placement="top" title="Xuất File"><i
                 class="fas fa-file-import"></i></button>
         <button class="nv cog" data-toggle="tooltip" data-placement="bottom" title=""><i
@@ -232,10 +230,10 @@ for(let i=0;i<n;++i){
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>QL01</td>
+                    <td>Hà Hải Việt</td>
+                    <td>Quản Lý</td>
+                    <td>ĐV001</td>
                     <td>
                         <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
                                 aria-hidden="true"></i></a>
@@ -246,10 +244,10 @@ for(let i=0;i<n;++i){
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>QL02</td>
+                    <td>Nguyễn Việt Anh</td>
+                    <td>Quản Lý</td>
+                    <td>ĐV002</td>
                     <td>
                         <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
                                 aria-hidden="true"></i></a>
@@ -260,10 +258,10 @@ for(let i=0;i<n;++i){
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>QL03</td>
+                    <td>Nguyễn Tiến Dũng</td>
+                    <td>Quản Lý</td>
+                    <td>ĐV003</td>
                     <td>
                         <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
                                 aria-hidden="true"></i></a>
@@ -274,102 +272,25 @@ for(let i=0;i<n;++i){
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                aria-hidden="true"></i></a>
-                    </td>
+                    
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                aria-hidden="true"></i></a>
-                    </td>
+                    
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                aria-hidden="true"></i></a>
-                    </td>
+                    
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                aria-hidden="true"></i></a>
-                    </td>
+                    
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                aria-hidden="true"></i></a>
-                    </td>
+                    
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                aria-hidden="true"></i></a>
-                    </td>
+                    
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                aria-hidden="true"></i></a>
-                    </td>
+                    
                 </tr>
             </tbody>
         </table>
@@ -491,8 +412,8 @@ for(let i=0;i<n;++i){
                 var row = '<tr>' +
                     '<td><input type="text" class="form-control" name="manv" id="manv" value="" placeholder="Nhập Mã quản lý"></td>' +
                     '<td><input type="text" class="form-control" name="name" id="name" placeholder="Nhập Tên"></td>' +
-                    '<td><input type="text" class="form-control" name="captrn" id="gioitinh" placeholder="Nhập Quản lý"></td>' +
                     '<td><input type="text" class="form-control" name="chucvu" id="chucvu" value="" placeholder="Nhập Chức Vụ"></td>' +
+                    '<td><input type="text" class="form-control" name="captrn" id="gioitinh" placeholder="Nhập Đơn vị"></td>' +
                     '<td>' + actions + '</td>' +
                     '</tr>';
                 $("table").append(row);
@@ -517,7 +438,7 @@ for(let i=0;i<n;++i){
                 if (!empty) {
                     input.each(function () {
                         $(this).parent("td").html($(this).val());
-                        swal("Success!", "Bạn Đã Cập Nhật Thành công", "success");
+                        swal("", "Bạn Đã Cập Nhật Thành công", "success");
                     });
                     $(this).parents("tr").find(".edit").toggle();
                     $(".add-new").removeAttr("disabled");
@@ -535,13 +456,13 @@ for(let i=0;i<n;++i){
             });
             jQuery(function () {
                 jQuery(".add").click(function () {
-                    swal("Success!", "Bạn Đã Sửa Thành công", "success");
+                    swal("", "Bạn Đã Sửa Thành công", "success");
                 });
             });
             // Delete Hàng
             $(document).on("click", ".delete", function () {
                 $(this).parents("tr").remove();
-                swal("Success!", "Bạn Đã Xóa Thành công", "success");
+                swal("", "Bạn Đã Xóa Thành công", "success");
                 $(".add-new").removeAttr("disabled");
             });
         });
@@ -558,6 +479,8 @@ for(let i=0;i<n;++i){
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
+        <script src="fixed.js"></script>
+
 </body>
 
 </html>

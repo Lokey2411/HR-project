@@ -36,6 +36,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!--===============================================================================================-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fixed_nv.css">
+
+
 
     <script type="text/javascript">
               class Employee{
@@ -61,8 +64,9 @@ var lokeyFunction = function(){
 
 function timeBreak(clock){
     swal('Đã lưu thành công giờ');
-    clock.classList.toggle('clock');
+    clock.classList.remove('clock');
 }
+
         //Phân Trang Cho Table
         //<![CDATA[
         function Pager(tableName, itemsPerPage) {
@@ -178,12 +182,9 @@ function timeBreak(clock){
                     <li><a href="./sukien_nv.html"  data-toggle="tooltip" data-placement="bottom"
                         title="SỰ KIỆN" style="color: #000 !important;">SỰ KIỆN</a></li>
                     <li>
-                        <a href="#"  data-toggle="tooltip" data-placement="bottom"
-                        title="TÀI KHOẢN" style="color: #000 !important;"><b>Tài Khoản</b>
-                            <span class="caret"></span>
-                        </a>
+                        
                         <ul class="dropdown">
-                            <li><a href="/hr_management/index.html"  data-toggle="tooltip" data-placement="bottom"
+                            <li><a href="./index.html"  data-toggle="tooltip" data-placement="bottom"
                                 title="ĐĂNG XUẤT"><b>Đăng xuất <i class="fas fa-sign-out-alt"></i></b></a></li>
                         </ul>
                     </li>
@@ -193,7 +194,6 @@ function timeBreak(clock){
         </div>
     </nav>
     <div class="container-fluid al">    
-        <!-- <div id="clock" onclick = "timeBreak(this);"></div> -->
         <Br>
         <p class="timkiemnhanvien"><b>TÌM KIẾM NHÂN VIÊN:</b></p><Br><Br>
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Nhập tên nhân viên cần tìm..."
@@ -204,10 +204,8 @@ function timeBreak(clock){
 
         </form>
         <b>CHỨC NĂNG CHÍNH:</b><Br>
-        <button class="nv btn add-new" type="button" data-toggle="tooltip" data-placement="top"
-            title="Thêm Nhân Viên"><i class="fas fa-user-plus"></i></button>
         <button class="nv" type="button" onclick="sortTable()" data-toggle="tooltip" data-placement="top"
-            title="Lọc Dữ Liệu"><i class="fa fa-filter" aria-hidden="true"></i></button>
+            title="Sắp xếp danh sách nhân viên"><i class="fa fa-filter" aria-hidden="true"></i></button>
         <button class="nv xuat" data-toggle="tooltip" data-placement="top" title="Xuất File"><i
                 class="fas fa-file-import"></i></button>
         <button class="nv cog" data-toggle="tooltip" data-placement="bottom" title=""><i
@@ -231,145 +229,69 @@ function timeBreak(clock){
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
+                    <td>NV01</td>
+                    <td>Hà Hải Việt</td>
+                    <td>QL01</td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
 
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        
-                    </td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
+                    <td></td>
                 </tr>
                 <tr>
+                    <td>NV02</td>
+                    <td>Nguyễn Việt Anh</td>
+                    <td>QL02</td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        
-                    </td>
                 </tr>
                 <tr>
+                    <td>NV03</td>
+                    <td>Trần Quý Đức</td>
+                    <td>QL01</td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sữa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        
-                    </td>
                 </tr>
                 <tr>
+                    <td>NV04</td>
+                    <td>Nguyễn Thị Thanh Thảo</td>
+                    <td>QL01</td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        
-                    </td>
                 </tr>
                 <tr>
+                    <td>NV05</td>
+                    <td>Lê Minh Hiếu</td>
+                    <td>QL02</td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        
-                    </td>
                 </tr>
                 <tr>
+                    <td>NV06</td>
+                    <td>Hà Anh Tú</td>
+                    <td>QL02</td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        
-                    </td>
                 </tr>
                 <tr>
+                    <td>NV07</td>
+                    <td>Nguyễn Tiến Dũng</td>
+                    <td>QL03</td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        
-                    </td>
                 </tr>
                 <tr>
+                    <td>NV08</td>
+                    <td>Nguyễn Quang Hiếu</td>
+                    <td>QL03</td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
+                    <td class = "clock" onclick = "timeBreak(this); this.onclick = function(){}"></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td class = "clock" onclick = "timeBreak(this);"></td>
-                    <td>
-                        <a class="add" title="Lưu Lại" data-toggle="tooltip"><i class="fa fa-floppy-o"
-                                aria-hidden="true"></i></a>
-                        <a class="edit" title="Sửa" data-toggle="tooltip"><i class="fa fa-pencil"
-                                aria-hidden="true"></i></a>
-                        
-                    </td>
                 </tr>
             </tbody>
         </table>
@@ -435,7 +357,7 @@ function timeBreak(clock){
                 if (shouldSwitch) {
                     rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
                     switching = true;
-                    swal("Thành Công!", "Bạn Đã Lọc Thành Công", "success");
+                    swal("", "Bạn Đã Lọc Thành Công", "success");
                 }
             }
         }
@@ -499,11 +421,11 @@ function timeBreak(clock){
                 $(this).attr("disabled", "disabled");
                 var index = $("table tbody tr:last-child").index();
                 var row = '<tr>' +
-                    '<td><input type="text" class="form-control" name="name" id="name" placeholder="Nhập Tên"></td>' +
-                    '<td><input type="text" class="form-control" name="captren" id="captren" placeholder="Nhập Mã Quản Lý"></td>' +
-                    '<td><input type="text" class="form-control" name="namsinh" id="namsinh" value="" placeholder="Nhập Ngày Sinh"></td>' +
-                    '<td><div id = "clock" onclick = "timeBreak(this);"></div></td>' +
-                    '<td><div id = "clock" onclick = "timeBreak(this);"></div></td>' +
+                    '<td><input type="text" class="form-control" name="name" id="name" placeholder="Nhập mã nhân viên"></td>' +
+                    '<td><input type="text" class="form-control" name="captren" id="captren" placeholder="Nhập Mã tên nhân viên"></td>' +
+                    '<td><input type="text" class="form-control" name="namsinh" id="namsinh" value="" placeholder="Nhập Mã quản lý"></td>' +
+                    '<td class = "clock" onclick = "timeBreak(this); this.onclick = function(){} this.onclick = function(){}"></td>' +
+                    '<td class = "clock" onclick = "timeBreak(this); this.onclick = function(){} this.onclick = function(){}"></td>' +
                     '<td>' + actions + '</td>' +
                     '</tr>';
                 $("table").append(row);
@@ -514,6 +436,7 @@ function timeBreak(clock){
             $(document).on("click", ".add", function () {
                 var empty = false;
                 var input = $(this).parents("tr").find('input[type="text"]');
+                a = input;
                 input.each(function () {
                     if (!$(this).val()) {
                         $(this).addClass("error");
@@ -528,6 +451,7 @@ function timeBreak(clock){
                 if (!empty) {
                     input.each(function () {
                         $(this).parent("td").html($(this).val());
+                        // console.log(input); 
                         swal("Thành Công", "Bạn Đã Cập Nhật Thành Công", "success");
                     });
                     $(this).parents("tr").find(".edit").toggle();
@@ -546,13 +470,13 @@ function timeBreak(clock){
             });
             jQuery(function () {
                 jQuery(".add").click(function () {
-                    swal("Thành Công!", "Bạn Đã Sửa Thành Công", "success");
+                    swal("", "Bạn Đã Sửa Thành Công", "success");
                 });
             });
             // Delete Hàng
             $(document).on("click", ".delete", function () {
                 $(this).parents("tr").remove();
-                swal("Thành Công!", "Bạn Đã Xóa Thành Công", "success");
+                swal("", "Bạn Đã Xóa Thành Công", "success");
                 $(".add-new").removeAttr("disabled");
             });
         });
@@ -569,6 +493,8 @@ function timeBreak(clock){
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
+        <script src="fixed.js"></script>
+    <script src="fixed_nv.js"></script>
 </body>
 
 </html>
